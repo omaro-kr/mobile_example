@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Smoke" preserve-order="true" >
+
+    <parameter name="grid" value="local"/>
+    <parameter name="udid" value="Pixel"/>
+    <parameter name="mobilePlatformName" value="android"/>
+    <parameter name="mobilePlatformVersion" value="8.1"/>
+    <parameter name="deviceType" value="emulator"/>
+    <parameter name="appiumPort" value="4723"/>
+    <parameter name="driverType" value="appium"/>
+    <parameter name="wait" value="5"/>
+    <parameter name="singleSessionSuite" value="true"/>
+    <parameter name="androidApkPackage" value="com.vodqareactnative" />
+    <parameter name="androidApkActivity" value="com.vodqareactnative.MainActivity" />
+    <parameter name="androidApkPath" value="apps/VodQA.apk"/>
+
+    <test name="test kroger" >
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.kroger.mobile.cases"></package>
+        </packages>
+    </test>
+</suite>
